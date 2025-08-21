@@ -9,9 +9,10 @@ body {
 
 .heading {
     text-align: center;
+    margin-bottom: 50px; /* Add bottom margin to create space */
 }
 .heading h1 {
-    margin: 50px 0px -50px 0px;
+    margin: 50px 0px 20px 0px; /* Remove negative margin and add positive bottom margin */
 }
 .heading-title {
     display: flex;
@@ -29,26 +30,79 @@ body {
 }
 
 .content {
-    padding-top: 50px;
-    padding-left: 50px;
-    
+    padding: 30px 5%; /* Reduce top padding since we added margin to heading */
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
-.inside_content {
-    background-color: blanchedalmond;
-    width: 45%;
-    height: 800px;
-    float:left;
+.content h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+
+/* Blog Post Styles */
+.blog-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 30px; /* Margin between blog posts */
+}
+
+.blog-post {
+    background-color: #1a1a1a;
+    width: 100%;
+    border-radius: 15px;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #333;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    border-color: #555;
+}
+
+.blog-title {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 20px 0;
+    color: white;
+    font-weight: 600;
+}
+
+.blog-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.blog-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.blog-text {
+    flex: 1;
+    display: flex;
     align-items: center;
 }
 
-.inside_content2 {
-    margin-right:100px;
-    background-color: lightblue;
-    width: 45%;
-    height: 800px;
-    float: right;
-    align-items: center;
+.blog-text p {
+    font-size: 0.7em;
+    line-height: 1.6;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Mobile Responsive Styles */
@@ -75,22 +129,30 @@ body {
     }
     
     .content {
-        padding: 20px;
+        padding: 20px 5%;
     }
     
-    .inside_content,
-    .inside_content2 {
+    .content h1 {
+        font-size: 2em;
+    }
+    
+    .blog-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .blog-image {
         width: 100%;
-        float: none;
-        margin: 20px 0;
-        height: auto;
-        min-height: 300px;
-        padding: 20px;
-        box-sizing: border-box;
+        max-width: 300px;
+        margin: 0 auto;
     }
     
-    .inside_content2 {
-        margin-right: 0;
+    .blog-title {
+        font-size: 1.5em;
+    }
+    
+    .blog-text p {
+        font-size: 1em;
     }
 }
 
@@ -115,6 +177,14 @@ body {
     }
     
     .content {
-        padding: 10px;
+        padding: 10px 3%;
+    }
+    
+    .blog-post {
+        padding: 20px;
+    }
+    
+    .blog-title {
+        font-size: 1.3em;
     }
 }
