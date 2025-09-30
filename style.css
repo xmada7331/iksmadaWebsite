@@ -227,21 +227,23 @@ h1 {
     
     /* Description Container */
     .descriptionContainer {
-        font-size: 120px;
-        padding: 20px;
+        font-size: 60px;
+        padding: 10px;
         margin: 0;
         position: relative;
         top: auto;
         left: auto;
         transform: none;
-        width: auto;
+        width: 100vw;
+        overflow: hidden;
+        white-space: nowrap;
     }
     
     /* Main Container */
     .mainContainer {
         grid-template-columns: 1fr;
         gap: 20px;
-        padding: 50px 15px 40px 15px;
+        padding: 20px 15px 40px 15px;
         max-width: 100%;
     }
     
@@ -312,7 +314,7 @@ h1 {
     }
     
     .descriptionContainer {
-        font-size: 80px;
+        font-size: 40px;
     }
     
     .gameInGrid img {
