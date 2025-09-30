@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>iskmada</title>
+</head>
+<body style="background-color: #121212;">
+    <div class="topContainer">
+
+        <a href="index.html"><img src="timer_box_2.png" alt="logo" class="logo"></a>
+
+        <a href="index.html" ><h1>Home</h1></a> <h1>//</h1>
+        <a href="blog.html" ><h1>devlogs</h1></a> <h1>//</h1>
+        <a href="contact.html"><h1>Contact</h1></a>
+
+    </div>
+    <div class="descriptionContainer">
+        <h1>H1LL B0MB</h1>
+    </div>
+
+    <div class="blogContainer">
+
+            <h1>Skate it till you make it</h1>
+            <h4>devlog post time- 30.09.2025 (last update of the game was September 21st, 2025)</h4>
+            <p>H1LL B0MB is a project made yet again for the purpose of a game jam. Pizza Jam 2025 started on September 12th and ended 9 days later or September 21st. As of today the voting phase is still under process and will finish in 4 days. There are 58 submitted games and they are very much different from each other, because this game jam features 15 different themes to choose from. I did spend the first day of the development on coming up with ideas for the game. I tried thinking about at least one game for each of 15 themes and then filtered them by how much time it would take me to make and how motivated would I be making them. Ultimately I chose "Faster! Speed!!".
+                <br><br> The idea for a game was pretty simple- climb the steep street and try to grind as far as possible. Collected coins and upgrades in the shop would help the player get even further, so there is a feeling of progression. I've played a ton of browser games like these in my past (Burrito Bison, Learn To Fly, Shopping Cart Hero) and they would make me stay long hours in front of the screen because I wanted to see what the finish looks like. This feeling of nostalgia, but also my love for skateboarding in general were pretty good motivators for making this game.
+                <br><br> Unfortunately by the circumstances in the real world, I wasn't able to submit fully finished game and a scrapped version of H1LL B0MB was the final product for this game jam. This was hardly a problem for me, because as I mentioned in earlier devlogs, a place on the podium is not something I aim for when making these games. On the other hand, the game jam is very "alpha-friendly" in a sense that games that are not finished are most welcome there and even encouraged to be published. 
+                <br><br> Early build of H1LL B0MB didn't stop the players from having fun apparently. Even though in my mind the game was far from finished (it had absolutely no sound effects or music, it lacked a proper finish- the rail on which the player grinds would simply disappear after a certain distance) I was surprised to recieve comments praising the movement, upgrade variety or aesthetics. Obviously reading them made me want to work on it even more. So I did.
+                <br><br> During the voting phase in a game jam you are not allowed to update the game (you may sometimes update the game page however, add screenshots and change the description of the game). Luckily I have my own website where I can publish and update my games without restrictions. As soon as the voting phase finishes I will also update its itch.io page.
+                <br><br>The first thing I did was add some music. I know when playing a skate game, music is crucial to get that street feeling. Luckily the humblebundle package I purchased earlier had tons and tons of ready-to-go music pieces and SFX. For the final version of the game I picked 4 tracks that in my opinion enhance the experience of that skating feeling. I knew it had to be dynamic, but also.. indie-like? I wasn't making a fully fledged skate game like Tony Hawk's Pro Skater or Skate, so I could tone down the seriousness a bit. The SFX I used for grinding on the rail, jumping off the ramp or collecting coin were also all premade either included in the humblebundle package or I had to download licence-free samples from the internet. I usually try to make sound effects by hand in some goofy way just grinding and banging on the objects in front of my microphone, but here I couldn't find a proper combination that would give this feeling of hitting trucks against a metal pipe.
+                <br><br>Rest of the sprites came next. The timer and height meters were the default Unity sliders just slapped on top of the viewport which ruined the whole hand-drawn aesthetic and style. So I drew a burning fuse for the timer and a skateboard for the height meter as well as the middle fingered cursor showing the exact height of the player. I also added tiny icons for each of the stats at the end of the round (max speed, max height, distance, grind time). I would make some more sprites for the end game later on.
+                <br><br>The last thing I did was implement some sort of end game/ finish line. I calculated that when the player purchases all of the upgrades, the approximate maximum distance (without using exploits) is about 900 meters. So I put the finish like on a mark of exactly 800 meters. I do not wish to spoil the ending, but you might want to stick a while after seeing the credits.
+                <br><br>For now the future of H1LL B0MB is unknown to me. I feel like the project is finished and while there are some ideas that didn't make it to the final version (making tricks in the air, changing skater skin, progressive skater weardown and scars, adding some sort of intro, collectable speed boosts, rocks on the grind that slow the player down) I believe this will be the last version of H1LL B0MB that will be updated on itch.io as soon as the voting ends.
+                <br><br><br>PS: the use of Copilot during this project was close to 0%. I learned a lot from my previous projects as well as from some simple tutorials and hints on the internet. I might consider cancelling my paid subscription... </p>
+
+            <h2></h2>
+
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" style="display: none;">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <style>
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close:hover {
+            color: #ccc;
+        }
+
+        .clickable-image:hover {
+            opacity: 0.8;
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+    </style>
+
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close');
+        
+        // Add click event to all clickable images
+        document.querySelectorAll('.clickable-image').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                modalImg.src = this.src;
+            });
+        });
+        
+        // Close modal when clicking the X
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
