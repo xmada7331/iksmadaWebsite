@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.iksmada.com">
+    <meta property="og:title" content="iksmada - Lights Out devlog">
+    <meta property="og:description" content="Play my indie games.">
+    <meta property="og:image" content="https://www.iksmada.com/ligttsout_icon.png?v=3">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:site_name" content="iksmada">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q13GLG439K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q13GLG439K');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>iskmada</title>
+</head>
+<body style="background-color: #121212;">
+    <div class="topContainer">
+
+        <a href="https://www.iksmada.com"><img src="timer_box_2.png" alt="logo" class="logo"></a>
+
+        <a href="https://www.iksmada.com"><h1>HOME</h1></a> <h1>//</h1>
+        <a href="blog.html" ><h1>devlogs</h1></a> <h1>//</h1>
+        <a href="contact.html"><h1>Contact</h1></a>
+
+    </div>
+    <div class="descriptionContainer">
+        <h1>Lights out</h1>
+    </div>
+
+    <div class="blogContainer">
+            <h1>A christmas miracle</h1>
+            <h4>13.01.2026</h4>
+            <p>My last game of 2025 was a humble dungeon crawler in a horror and dark setting.
+                <br><br> Lights out was a game made specifically for Jame Gam Christmas Edition. The main theme other than the obvious christmas setting was "Light". There was also a special object that contributed to additional points in the final rating, this time it was a bell. In the development process I had forgotten about that and my game launched without any trace of a bell. 
+                <br><br> I made the map layout and its texture in Blender. All other sprites I made using Krita and my good old drawing tablet.
+                <br> I had a lot of fun with it and with the quality of the sprites I've drawn. 
+                <br><br>The game is a dungeon crawler, like I mentioned before. The player can turn left or right and move forwards. His main objective is to quietly put the presents under the christmas tree and escape the house. There are a lot of rooms and the player must find matching keys to open the doors blocking the rooms. 
+                <br>I came up with a cool (I think) mechanic that makes the player use the flashlight in a special way. At all times the player can see elf's hands. The left one is always holding the flashlight and the right one serves a few purposes. The flashlight sends out a stream of light through which the player can see the environment. Everything else is blacked out. The light stream is a flat 2D plane that moves left and right, its position anchored on the hand. The player uses the keyboard to move the elf and mouse to move the hand with the flashlight and pick up keys or open doors. Right hand serves three purposes: it displays a map, it holds the picked up key and it can flick the flashlight if it runs out of battery. All three are essential and would be used at some point in the game. The player needs a map to navigate, hold the key to open the door and flick the flashlight to see the keys he needs to pick up.
+                <br><br> The game jam lasted a week and ended on the 24th December 2025. I've worked on it throughout the whole week. I've always wanted to make a dungeon crawler game, as well as a game in a horror/ dark setting. I've gained a lot of experience not only in making a dungeon crawler, but also (and I think primarily) in drawing in Krita. I learned a great deal while making MTX Sim, but here I really really liked what came out of it. The slightly creepy elvish hands with long rotten nails boosted the dark experience and gave it a bit more personality.
+                <br><br> Lights out has taken 57th place out of 90 submitted games.<br></p>
+            <img src="blog_images/lightsout/promo1.png" class="clickable-image" style="cursor: pointer;">
+            <img src="blog_images/lightsout/promo2.png" class="clickable-image" style="cursor: pointer;">
+            </p>
+
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" style="display: none;">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <style>
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close:hover {
+            color: #ccc;
+        }
+
+        .clickable-image:hover {
+            opacity: 0.8;
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+    </style>
+
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close');
+        
+        // Add click event to all clickable images
+        document.querySelectorAll('.clickable-image').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                modalImg.src = this.src;
+            });
+        });
+        
+        // Close modal when clicking the X
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
