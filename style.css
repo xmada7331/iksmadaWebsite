@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     color:black;
     background-color:rgb(0, 0, 0);
     font-family: "Roboto Condensed", sans-serif;
@@ -23,37 +25,68 @@ h1 {
 }
 
 .topContainer {
+    background-color: #161616;
+    border: 2px solid rgb(41, 41, 41);
     font-family: "Bebas Neue", sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     width: 100%;
-    gap: 50px;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 .topContainer .logo {
-    position: fixed;
-    top: 20px;
-    left: 20px;
     width: 70px;
-    z-index: 100;
     transition: opacity 0.3s ease;
+    z-index: 100;
 }
 
 .topContainer .logo:hover {
     content: url('timer_box.png');
+    opacity: 0.8;
 }
 
 .topContainer h1 {
     text-align: center;
     font-size: 50px;
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+}
+
+.topContainer a {
+    transition: transform 0.3s ease;
+}
+
+.topContainer a:hover {
+    transform: scale(1.1);
+}
+
+.left-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
 }
 .descriptionContainer {
     font-family: "Bebas Neue", sans-serif;
@@ -92,10 +125,18 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: left;
+    transition: transform 0.3s ease;
 }
 
 .gameInGrid img {
     width: 300px;
+}
+
+.gameInGrid:hover {
+    transform: scale(1.05);
+}
+.gameInGrid img:hover {
+    opacity: 0.8;
 }
 
 .blogContainer h1 {
@@ -224,6 +265,15 @@ h1 {
         top: 15px;
         left: 15px;
     }
+
+    .left-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .right-icons {
+        gap: 15px;
+    }
     
     /* Description Container */
     .descriptionContainer {
@@ -311,6 +361,19 @@ h1 {
     
     .topContainer {
         gap: 15px;
+    }
+
+    .left-links {
+        gap: 10px;
+    }
+
+    .right-icons {
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
     }
     
     .descriptionContainer {
