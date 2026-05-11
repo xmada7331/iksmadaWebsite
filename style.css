@@ -162,7 +162,7 @@ h1 {
     padding-bottom:50px;
 }
 
-.blogContainer p {
+.blogContainer p, li, ul {
     font-size:20px;
     color:white;
     padding: 0px 20px 40px 80px;
